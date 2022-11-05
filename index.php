@@ -21,14 +21,14 @@
 		<div id="allTheThings">
 			<div id="member">
 				<a href="member">
-					<img src="img/icon-g9c9f7fca3_640.png" width="250px" height="auto"/><br />
+					<img src="img/icon-g9c9f7fca3_640.png" width="200px" height="200px"/><br />
 					&nbsp;Member Login
 				</a>
 			</div>
 			<div id="verticalLine">
 				<div id="librarian">
 					<a id="librarian-link" href="librarian">
-						<img src="img/librarian.jpg" width="250px" height="220" /><br />
+						<img src="img/librarian.jpg" width="200px" height="200px" /><br />
 						&nbsp;&nbsp;&nbsp;Librarian Login
 					</a>
 				</div>

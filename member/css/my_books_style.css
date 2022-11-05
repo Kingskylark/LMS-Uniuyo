@@ -1,4 +1,5 @@
 /*----------Form styles----------*/
+@media only screen and (min-width: 550px) {
 .cd-form {
   width: 90%;
   max-width: 1000px;
@@ -88,4 +89,5 @@
   -moz-osx-font-smoothing: grayscale;
   border-radius: .25em;
   padding: 16px;
+}
 }

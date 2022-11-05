@@ -44,6 +44,10 @@
 				<input type="button" value="Today's Reminder" />
 			</a><br /><br />
 
+			<a href="card.php">
+				<input type="button" value="Id Cards" />
+			</a><br /><br />
+
 		</div>
 	</body>
 </html>

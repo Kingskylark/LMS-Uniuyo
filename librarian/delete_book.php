@@ -52,7 +52,7 @@
 							</td>";
 					for($j=0; $j<6; $j++)
 						if($j == 4)
-							echo "<td>Rs.".$row[$j]."</td>";
+							echo "<td><del>N</del>.".$row[$j]."</td>";
 						else
                             echo "<td>".$row[$j]."</td>";
                             
@@ -66,7 +66,7 @@
 			
 			
 		?>
-
+<button onclick="history.back()" class="btn btn-success ml-5 p-3 mb-5" >Back</button>
     </body>
 
 </html>

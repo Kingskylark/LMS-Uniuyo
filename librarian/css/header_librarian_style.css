@@ -1,3 +1,4 @@
+@media only screen and (min-width: 550px) {
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -134,4 +135,5 @@ header a {
 
 .dropdown:hover .dropbtn {
   background-color: #d34060;
+}
 }

@@ -54,5 +54,7 @@
 		else
 			echo "<h2 align='center'>No Pending Reminders</h2>";
 	?>
+
+<button onclick="history.back()" class="btn btn-success ml-5 p-3 mb-5" >Back</button>
 	</body>
 </html>

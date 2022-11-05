@@ -1,4 +1,5 @@
 /*----------Custom Icons----------*/
+@media only screen and (min-width: 550px) {
 .cd-form .icon input {
   padding-left: 54px !important;
 }
@@ -36,4 +37,5 @@
 .cd-form [required].m-balance {
   background: url("../img/ic_member_balance.svg") no-repeat 16px center,
     url("../img/ic_required.svg") no-repeat top right;
+}
 }

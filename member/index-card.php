@@ -61,7 +61,7 @@ else{
 
 
           // image upload 
-          $uploaddir = 'assets/uploads/';
+          $uploaddir = 'img/';
           $uploadfile = $uploaddir . basename($_FILES['image']['name']);
 
       
@@ -114,7 +114,7 @@ else{
  
 
   <!-- Edit Modal -->
-  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+  <!-- <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -144,23 +144,8 @@ else{
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
 
-<!-- Navigation bar start  -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-success" >
-  <a class="navbar-brand" href="#"><img src="assets/images/codingcush-logo.png" alt=""></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-       </div>
-</nav>
-<!-- Navigation bar end  -->
 
   <?php
   if($insert){
@@ -291,38 +276,7 @@ else{
   </div>
 </div>
 
-  <div class="container my-4">
-
-
-    <table class="table" id="myTable">
-      <thead>
-        <tr>
-          <th scope="col">S.No</th>
-          <th scope="col">Name</th>
-          <th scope="col">Reg No.</th>
-          <th scope="col">Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php 
-          $sql = "SELECT * FROM `cards` order by 1 DESC";
-          $result = mysqli_query($conn, $sql);
-          $sno = 0;
-          while($row = mysqli_fetch_assoc($result)){
-            $sno = $sno + 1;
-            echo "<tr>
-            <th scope='row'>". $sno . "</th>
-            <td>". $row['name'] . "</td>
-            <td>". $row['reg_no'] . "</td>
-            <td> <button class='edit btn btn-sm btn-warning' id=".$row['sno'].">Edit</button> <button class='delete btn btn-sm btn-danger' id= d".$row['sno'].">Delete</button>  </td>
-          </tr>";
-        } 
-          ?>
-
-
-      </tbody>
-    </table>
-  </div>
+  
   <hr>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -344,40 +298,7 @@ else{
 
     });
   </script>
-  <script>
-    edits = document.getElementsByClassName('edit');
-    Array.from(edits).forEach((element) => {
-      element.addEventListener("click", (e) => {
-        console.log("edit ");
-        tr = e.target.parentNode.parentNode;
-        name = tr.getElementsByTagName("td")[0].innerText;
-        id_no = tr.getElementsByTagName("td")[1].innerText;
-        console.log(name, id_no);
-        nameEdit.value = name;
-        id_noEdit.value = id_no;
-        snoEdit.value = e.target.id;
-        console.log(e.target.id)
-        $('#editModal').modal('toggle');
-      })
-    })
-
-    deletes = document.getElementsByClassName('delete');
-    Array.from(deletes).forEach((element) => {
-      element.addEventListener("click", (e) => {
-        console.log("edit ");
-        sno = e.target.id.substr(1);
-
-        if (confirm("Are you sure you want to delete?")) {
-          console.log("yes");
-          window.location = `index.php?delete=${sno}`;
-          // TODO: Create a form and use post request to submit a form
-        }
-        else {
-          console.log("no");
-        }
-      })
-    })
-  </script>
+ 
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+@media only screen and (min-width: 550px) {
 /*----------Custom radio button----------*/
 .control-group {
 	display: inline-block;
@@ -116,4 +117,5 @@
     -o-transform: scale(0.8);
     transform: scale(0.8);
   }
+}
 }

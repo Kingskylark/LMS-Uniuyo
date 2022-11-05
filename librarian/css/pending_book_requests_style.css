@@ -1,4 +1,5 @@
 /*----------Form styles----------*/
+@media only screen and (min-width: 550px) {
 .cd-form {
   width: 90%;
   max-width: 600px;
@@ -95,4 +96,5 @@
 
 .cd-form .error-field {
   border-color: #e94b35 !important;
+}
 }

@@ -1,4 +1,5 @@
 /*----------Custom Icons----------*/
+@media only screen and (min-width: 550px) {
 .cd-form .icon input, .cd-form .icon select{
   padding-left: 54px !important;
 }
@@ -34,4 +35,5 @@
 }
 .cd-form [required].b-copies {
   background: url("../img/ic_book_copies.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
+}
 }

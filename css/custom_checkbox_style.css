@@ -1,4 +1,5 @@
-/*----------Custom checkbox----------*/
+@media only screen and (min-width: 550px) {
+	/*----------Custom checkbox----------*/
 .control-group {
 	display: inline-block;
 	width: 200px;
@@ -113,4 +114,5 @@
     -o-transform: scale(0.8);
     transform: scale(0.8);
   }
+}
 }

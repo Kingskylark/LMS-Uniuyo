@@ -48,7 +48,7 @@
 					$j;
 					for($j=0; $j<3; $j++)
 						echo "<td>".$row[$j]."</td>";
-					echo "<td>Rs.".$row[$j]."</td>";
+					echo "<td><del>N.</del>".$row[$j]."</td>";
 					echo "</tr>";
 				}
 				echo "</table><br /><br />";
@@ -124,5 +124,6 @@
 					echo error_without_field("No registration selected");
 			}
 		?>
+		<button onclick="history.back()" class="btn btn-success ml-5 p-3 mb-5" >Back</button>
 	</body>
 </html>

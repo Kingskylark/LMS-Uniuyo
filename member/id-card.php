@@ -1,4 +1,5 @@
 <?php 
+require "../header.php";
         $notfound = false;
         include 'config.php';
         $html = '';
@@ -12,7 +13,7 @@
  
  
              if(mysqli_num_rows($result)>0){
-             $html="<div class='card' style='width:350px; padding:0;' >";
+             $html="<div class='' style='width:100%; padding:0;' >";
      
                $html.="";
                          while($row=mysqli_fetch_assoc($result)){
@@ -21,8 +22,6 @@
                             $reg_no = $row["reg_no"];
                             $level = $row['level'];
                             $session = $row['session'];
-                            $address = $row['address'];
-                            $email = $row['email'];
                             $faculty = $row['faculty'];
                             $phone = $row['phone'];
                             $address = $row['address'];
@@ -48,46 +47,49 @@
                                                   
                                               </div>
                                   
-                                              <div class='container-3'>
-                                                  <div class='info-1'>
+                                              <div class='container-3 d-flex justify-content-around'>
+                                                  
                                                       <div class='id'>
                                                           <h4>Reg No</h4>
                                                           <p>$reg_no</p>
                                                       </div>
                                   
+                                                      <div class='id'>
+                                                      <h4>Session</h4>
+                                                      <p>$session</p>
+                                                  </div>
+
+                                                  <div class='id'>
+                                                          <h4>Faculty</h4>
+                                                          <p>$faculty</p>
+                                                      </div>
+                                                      </div>
+
+                                                      <div class='d-flex justify-content-around container-4'>
                                                       <div class='dob'>
                                                           <h4>Phone</h4>
                                                           <p>$phone</p>
                                                       </div>
                                   
-                                                  </div>
-
-                                                  <div class='info-3'>
-                                                  <div class='id'>
-                                                      <h4>Address</h4>
-                                                      <p>$address</p>
-                                                  </div>
-
+                                                
                                                   <div class='dob'>
-                                                      <h4>Signature</h4>
-                                                      <p>......................</p>
+                                                  <h4>Department</h4>
+                                                  <p>$department</p>
                                                   </div>
                                                   
-                                                </div>
-
-                                                  <div class='info-2'>
-                                                      <div class='id'>
-                                                          <h4>Faculty</h4>
-                                                          <p>$faculty</p>
-                                                      </div>
-                                                      <div class='dob'>
-                                                          <h4>Department</h4>
-                                                          <p>$department</p>
-                                                      </div>
                                                   </div>
                                                   
-                                                 
+                                                  <div class=' d-flex justify-content-around container-5'>
+                                                  <div class = 'dob'>
+                                                  <h4 >Signature</h4> 
+                                                  <p >....................</p>
                                                   </div>
+                                                  <div class = 'dob'>
+                                                  <h4>Level</h4>
+                                                  <p >$level</p>
+                                              </div>
+                                                                                                </div>
+                                             
                                                   </div>
                                                   <!-- id card end -->
                                         ";
@@ -124,10 +126,11 @@
 
 <style>
 body{
-   font-family:'arial';
+   font-family:'Orbitron', sans-serif'
+   width:100%;
    }
 
-.lavkush img {
+/* .lavkush img {
   border-radius: 8px;
   border: 2px solid blue;
 }
@@ -141,32 +144,39 @@ hr.new2 {
   width:350px;
   text-align:left;
   align-items:left;
-}
+} */
  /* second id card  */
- p{
+ .box-2 p{
      font-size: 13px;
      /* margin-top: -5px; */
      margin-bottom:0;
  }
  .container {
-    width: 80vh;
-    height: 45vh;
+    width: 300px;
+    height: 200px;
     margin: auto;
-    background-color: lightgreen;
-    box-shadow: 0 1px 10px rgb(146 161 176 / 50%);
+    background-color: white;
+    /* box-shadow: 0 1px 10px green; */
     overflow: hidden;
     border-radius: 10px;
-    background-image: url(assets/images/download.png);
-    background-blend-mode: overlay;
-    background-repeat: none;
-   background-size: cover;
+    border:none;
+    margin-top:10px;
+    background-image: url("../img/favicon-32x32.png");
+    /* background-repeat:none; */
+    background-size:cover;
+    background-blend-mode: multiply;
+  }
 
-
-}
+  .container h4{
+    margin-bottom:0px!important
+  }
+  .container p{
+    margin-bottom:0px!important
+  }
 
 .header {
-    width: 73vh;
-    height: 15vh;
+    width: 100%;
+    height: 15%;
     background-color: transparent;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
@@ -175,49 +185,55 @@ hr.new2 {
 .header h1 {
     color: green;
     text-align: center;
-    margin-left: 4rem;
-    margin-top: 15px;
+    margin-left: 4.7rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size:20px;
+    font-weight:bold
 }
 
 .container-2 {
-    width: 80vh;
-    height: 10vh;
+    width: 100%;
+    /* height: 10vh; */
     margin: 0px auto;
-    margin-top: -20px;
+    /* margin-top: -20px; */
     display: flex;
 }
 
 .box-1 {
-    border: 4px solid black;
-    width: 90px;
-    height: 95px;
-    margin-top: -3rem;
+    border: 2px solid green;
+    width:40%;
+    height: 60px;
+    margin-top: -1rem;
     margin-right: 1rem;
-    border-radius: 3px;
+    border-radius: 5px;
+    overflow:hidden
   
 }
 
 .box-1 img {
-    width: 82px;
-    height: 87px;
-    
+    width: 100%;
+    height: 100%;
+    overflow:hidden
 }
 
 .box-2 {
     flex-grow:1;
-    width: 33vh;
-    height: 8vh;
+    width: 100%;
+    /* height: 8vh; */
     margin: 7px 0px;
-    padding: 5px 7px 0px 0px;
+    /* padding: 5px 7px 0px 0px; */
     text-align: left;
     font-family: 'Poppins', sans-serif;
 }
 
 .box-2 h2 {
-    font-size: 1.3rem;
-    margin-top: -5px;
+    font-size: 16px;
+    /* margin-top: -5px; */
     color: black;
-    ;
+    /* text-align:center; */
+    margin-bottom: 0px!important;
+    font-weight:bold;
 }
 
 
@@ -226,37 +242,38 @@ hr.new2 {
     font-family: 'Shippori Antique B1', sans-serif;
     font-size: 0.7rem;
     text-align:center;
+    gap:5%
+}
+.container-4 {
+    display:    flex;
+    font-family: 'Shippori Antique B1', sans-serif;
+    font-size: 0.7rem;
+    text-align:center;
+    gap:5%
+}
+.container-5 {
+    display:    flex;
+    font-family: 'Shippori Antique B1', sans-serif;
+    font-size: 0.7rem;
+    text-align:center;
+    gap:5%
 }
 
 .id h4 {
-    color: red;
-    font-size:20px;
-    margin-bottom:1px
+    color: green;
+    font-size:16px;
+    /* margin-bottom:1px */
+    font-weight:bold;
 }
 
 .dob h4 {
-    color: red;
-    font-size:20px;
-    margin-bottom:1px;
-    margin-top:10px;
+    color: green;
+    font-size:16px;
+    /* margin-bottom:1px; */
+    /* margin-top:10px; */
+    font-weight:bold;
 }
-
-.dob p {
-    font-size:15px;
-    margin-top:10px;
-}
-
-.info-2 {
-    width: 20vh;
-    height: 12vh;
-    text-align: center;
-   }
-
-.info-3 {
-    width: 17vh;
-    height: 12vh;
-    flex-grow:1;
-}
+/
 
 
     </style>
@@ -264,21 +281,6 @@ hr.new2 {
   </head>
   <body>
 
- <!-- Navigation bar start  -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-success" >
-  <a class="navbar-brand" href="#"><img src="assets/images/codingcush-logo.png" alt=""></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index-card.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-        </ul>
-    </nav>
-<!-- Navigation bar end  -->
 
   <br>
 
@@ -301,15 +303,17 @@ hr.new2 {
           <div class="card-header" >
               Here is your Library Card
           </div>
-        <div class="card-body" id="mycard">
+        <div class="" id="mycard">
           <?php echo $html ?>
         </div>
         <br>
         
      </div>
+     
   </div>
   <hr>
-<button id="demo" class="downloadtable btn btn-success" onclick="downloadtable()"> Download Id Card</button>
+<button id="demo" class="downloadtable btn btn-primary" onclick="downloadtable()"> Download Id Card</button>
+<button onclick="history.back()" class="btn btn-success ml-2" >Back</button>
   
 </div>
   <!-- Optional JavaScript -->

@@ -1,4 +1,5 @@
 /*----------Global styles----------*/
+@media only screen and (min-width: 550px) {
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -14,4 +15,5 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #2b3e51;
   background-color: #ffffff;
+}
 }

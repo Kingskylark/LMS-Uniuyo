@@ -1,12 +1,15 @@
+@media only screen and (min-width: 550px) {
 #allTheThings {
-  width: 90%;
+  width: 100%;
+ height: auto;
   max-width: 800px;
   text-align: center;
   margin: 8em auto;
   font-size: 1.3rem;
   color: #94aab0;
   display: block;
-  overflow: hidden;
+  /* overflow: hidden; */
+  
 }
 
 a{
@@ -32,8 +35,9 @@ a{
 {
 	transition: all .2s ease-in-out;
 }
-
-#member:hover, #librarian:hover
-{
-	transform: scale(1.1);
 }
+
+/* #member:hover, #librarian:hover
+{
+	transform: scale(.5);
+} */

@@ -85,4 +85,5 @@
 			}
 		}
 	?>
+	<button onclick="history.back()" class="btn btn-success ml-5 p-3 mb-5" >Back</button>
 </html>
